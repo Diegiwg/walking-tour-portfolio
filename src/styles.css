@@ -13,7 +13,9 @@ The following is taken from: https://www.joshwcomeau.com/css/custom-css-reset/
   /*
     2. Remove default margin
   */
+
   * {
+    box-sizing: border-box;
     margin: 0;
   }
   /*
