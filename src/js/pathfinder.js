@@ -31,7 +31,7 @@ export function makePlayerObj(appRef, size, row, col) {
  *  @param {number} playerSpeed
  *  @param { {x:number, y:number} } coord
  */
-function walker(playerRef, playerSpeed, coord) {
+function walker(playerRef, playerSpeed, coord, divSize) {
     const playerCoord = {
         x: pxToNumber(playerRef.node.style.left),
         y: pxToNumber(playerRef.node.style.top),
@@ -60,8 +60,19 @@ function walker(playerRef, playerSpeed, coord) {
         playerRef.node.style.top = numberToPx(playerCoord.y + playerSpeed);
     }
 
+    // Debug
+
+    // divSize, playerY / divSize, playerX / divSize
+    console.log(
+        divSize,
+        "Y:",
+        playerCoord.y / divSize,
+        "X:",
+        playerCoord.x / divSize
+    );
+
     setTimeout(() => {
-        walker(playerRef, playerSpeed, coord);
+        walker(playerRef, playerSpeed, coord, divSize);
     }, 100);
 }
 
@@ -82,7 +93,7 @@ export function monitorClick(
                 if (playerRef.state === "moving") return;
 
                 const paddingLeft =
-                    el.pointCol === "left" ? playerSize : divSize;
+                    el.pointCol === "left" ? 0 : divSize + playerSize;
 
                 const paddingTop =
                     el.pointRow === "top" ? 0 : divSize + playerSize;
@@ -97,7 +108,12 @@ export function monitorClick(
                     el.index[0] * divSize +
                     playerSize * (el.index[0] - 1);
 
-                walker(playerRef, playerSpeed, { x: pointX, y: pointY });
+                walker(
+                    playerRef,
+                    playerSpeed,
+                    { x: pointX, y: pointY },
+                    divSize
+                );
             });
         });
     });

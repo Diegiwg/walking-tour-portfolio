@@ -31,13 +31,14 @@ export function makeDivGrid(appRef, gridSize, pathSize, divSize) {
     const grid = [];
 
     let pad = 0;
-
     for (let row = 0; row < gridSize; row++) {
-        const path = [];
-
         const container = makeContainer(pathSize);
 
+        const path = [];
         for (let col = 0; col < gridSize; col++) {
+            const color = randomColor();
+            const node = makeDiv(color, divSize);
+
             const el = {
                 // col pointer
                 pointCol: col < gridSize / 2 ? "right" : "left",
@@ -47,16 +48,13 @@ export function makeDivGrid(appRef, gridSize, pathSize, divSize) {
 
                 // element index
                 index: [row, col],
+
+                // node ref
+                node,
             };
-
-            const color = randomColor();
-            const node = makeDiv(color, divSize);
-
-            node.setAttribute("data-point", JSON.stringify(el));
-            el["node"] = node;
+            path.push(el);
 
             pad++;
-            path.push(el);
             container.appendChild(node);
         }
 
