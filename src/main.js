@@ -19,9 +19,8 @@ APP.style.gap = numberToPx(PATH_SIZE);
 // Make a Grid
 const grid = makeDivGrid(APP, GRID_SIZE, PATH_SIZE, DIV_SIZE);
 
-console.log(grid);
-
 // Make Player
 const player = makePlayerObj(APP, PATH_SIZE, DIV_SIZE, 0);
 
-monitorClick(player, grid, PATH_SIZE, DIV_SIZE);
+// Monitor Click's and run walker
+monitorClick(player, grid, PATH_SIZE, DIV_SIZE, 5);
