@@ -42,6 +42,18 @@ function walker(playerRef, playerSpeed, coord, divSize) {
         return;
     }
 
+    // Debug
+    console.log(
+        "\nY:",
+        playerCoord.y,
+        "\ny:",
+        coord.y,
+        "\nX:",
+        playerCoord.x,
+        "\nx:",
+        coord.x
+    );
+
     playerRef.state = "moving";
 
     if (playerCoord.x === coord.x) {
@@ -59,17 +71,6 @@ function walker(playerRef, playerSpeed, coord, divSize) {
     } else {
         playerRef.node.style.top = numberToPx(playerCoord.y + playerSpeed);
     }
-
-    // Debug
-
-    // divSize, playerY / divSize, playerX / divSize
-    console.log(
-        divSize,
-        "Y:",
-        playerCoord.y / divSize,
-        "X:",
-        playerCoord.x / divSize
-    );
 
     setTimeout(() => {
         walker(playerRef, playerSpeed, coord, divSize);

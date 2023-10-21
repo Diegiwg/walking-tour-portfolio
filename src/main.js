@@ -26,3 +26,10 @@ const player = makePlayerObj(APP, PLAYER_SIZE, DIV_SIZE, 0);
 
 // Monitor Click's and run walker
 monitorClick(player, grid, PLAYER_SIZE, DIV_SIZE, PLAYER_SPEED);
+
+// document.elementFromPoint(x, y);
+// Provavelmente terá que modificar o sistema de geração do Grid,
+// para uma 'geração' manual, para que o elementos estejam na grid
+// ocupando apenas as posições 'corretas', e assim, é possível
+// testar se o player está indo para um local que tem elemento
+// e se sim, não executar a função.
