@@ -1,12 +1,13 @@
 import { makeDivGrid } from "./js/grid.js";
 import { numberToPx } from "./js/utils.js";
+import { makePlayerObj, monitorClick } from "./js/pathfinder.js";
 
 /**
  * @type {HTMLDivElement}
  */
 const APP = document.querySelector("#app");
 
-const GRID_SIZE = 3;
+const GRID_SIZE = 5;
 const PATH_SIZE = 20;
 const DIV_SIZE = 100;
 
@@ -16,4 +17,11 @@ APP.style.flexDirection = "column";
 APP.style.gap = numberToPx(PATH_SIZE);
 
 // Make a Grid
-makeDivGrid(APP, GRID_SIZE, PATH_SIZE, DIV_SIZE);
+const grid = makeDivGrid(APP, GRID_SIZE, PATH_SIZE, DIV_SIZE);
+
+console.log(grid);
+
+// Make Player
+const player = makePlayerObj(APP, PATH_SIZE, DIV_SIZE, 0);
+
+monitorClick(player, grid, PATH_SIZE, DIV_SIZE);
