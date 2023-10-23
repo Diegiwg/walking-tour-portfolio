@@ -39,7 +39,16 @@ export function makePlayerObj(size, row, col) {
  *  @param {number} playerSpeed
  *  @param { {x:number, y:number} } coord
  */
-function walker(appRef, playerRef, playerSpeed, coord, divSize) {
+function walker(
+    appRef,
+    playerRef,
+    playerSpeed,
+    coord,
+    divSize,
+    text,
+    divLeft,
+    divTop
+) {
     const playerCoord = {
         x: pxToNumber(playerRef.node.style.left),
         y: pxToNumber(playerRef.node.style.top),
@@ -48,18 +57,19 @@ function walker(appRef, playerRef, playerSpeed, coord, divSize) {
     if (playerCoord.x === coord.x && playerCoord.y === coord.y) {
         playerRef.state = "idle";
 
+        BALLOON = createBalloon(text, coord.x, coord.y);
         appRef.appendChild(BALLOON);
 
-        if (BALLOON.getAttribute("X") === "left") {
-            BALLOON.style.left = numberToPx(
-                playerCoord.x - BALLOON.offsetWidth
-            );
+        if (divLeft === "left") {
+            BALLOON.style.left = numberToPx(coord.x - BALLOON.offsetWidth);
+        } else if (divLeft === "right") {
+            BALLOON.style.left = numberToPx(coord.x + 20); // PlayerSize
         }
 
-        if (BALLOON.getAttribute("Y") === "top") {
-            BALLOON.style.top = numberToPx(
-                playerCoord.y - BALLOON.offsetHeight
-            );
+        if (divTop === "top") {
+            BALLOON.style.top = numberToPx(coord.y - BALLOON.offsetHeight);
+        } else if (divTop === "bottom") {
+            BALLOON.style.top = numberToPx(coord.y + 20); // PlayerSize
         }
 
         return;
@@ -87,7 +97,16 @@ function walker(appRef, playerRef, playerSpeed, coord, divSize) {
     }
 
     setTimeout(() => {
-        walker(appRef, playerRef, playerSpeed, coord, divSize);
+        walker(
+            appRef,
+            playerRef,
+            playerSpeed,
+            coord,
+            divSize,
+            text,
+            divLeft,
+            divTop
+        );
     }, 100);
 }
 
@@ -137,16 +156,10 @@ export function monitorClick(
                         playerRef,
                         playerSpeed,
                         { x: pointX, y: pointY },
-                        divSize
-                    );
-
-                    BALLOON = createBalloon(
+                        divSize,
                         el.text,
-                        pointX,
-                        pointY,
                         el.pointCol,
-                        el.pointRow,
-                        playerSize
+                        el.pointRow
                     );
                 }
             );
