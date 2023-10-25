@@ -1,5 +1,6 @@
 export function createBalloon(text, x, y) {
     const balloon = document.createElement("pre");
+    balloon.id = "balloon";
 
     balloon.textContent = text;
 
@@ -14,6 +15,8 @@ export function createBalloon(text, x, y) {
     balloon.style.borderRadius = "1rem";
 
     balloon.style.padding = "5px";
+
+    balloon;
 
     return balloon;
 }

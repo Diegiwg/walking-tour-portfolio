@@ -47,12 +47,7 @@ async function main() {
     console.log(config);
 
     // Make a Grid
-    const grid = makeDivGrid(
-        APP,
-        Number(config["grid-size"]),
-        Number(config["path-size"]),
-        Number(config["block-size"])
-    );
+    const grid = makeDivGrid(APP, config);
 
     // Make Player
     const player = makePlayerObj(
