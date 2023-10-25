@@ -70,6 +70,7 @@ export function makeDivGrid(appRef, config) {
     const grid = [];
 
     const gridSize = Number(config["grid-size"]);
+    let currentBlock = 0;
 
     let pad = 0;
     for (let row = 0; row < gridSize; row++) {
@@ -77,7 +78,7 @@ export function makeDivGrid(appRef, config) {
 
         const path = [];
         for (let col = 0; col < gridSize; col++) {
-            const block = config["blocks"][row + col];
+            const block = config["blocks"][currentBlock++];
 
             const node = makeDiv(
                 config["block-size"],

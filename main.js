@@ -44,8 +44,6 @@ async function main() {
         throw new Error(`Error parsing JSON: ${error}`);
     }
 
-    console.log(config);
-
     // Make a Grid
     const grid = makeDivGrid(APP, config);
 
