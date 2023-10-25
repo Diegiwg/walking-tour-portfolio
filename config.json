@@ -1,0 +1,159 @@
+{
+    "grid-size": 5,
+    "block-size": 100,
+    "path-size": 20,
+    "player-size": 20,
+    "player-speed": 5,
+    "blocks": [
+        {
+            "type": "img",
+            "src": "assets/1.jpg",
+            "name": "Mona Lisa",
+            "text": "Pintada por Leonardo da Vinci em 1503-1506, a 'Mona Lisa' é um retrato icônico da Renascença Italiana."
+        },
+        {
+            "type": "img",
+            "src": "assets/2.jpg",
+            "name": "A Noite Estrelada",
+            "text": "Criada por Vincent van Gogh em 1889, essa obra-prima é conhecida por suas pinceladas únicas e vibrantes estrelas."
+        },
+        {
+            "type": "img",
+            "src": "assets/3.jpg",
+            "name": "A Persistência da Memória",
+            "text": "Salvador Dalí pintou esta obra surrealista em 1931, apresentando relógios derretendo em um ambiente onírico."
+        },
+        {
+            "type": "img",
+            "src": "assets/4.jpg",
+            "name": "Guernica",
+            "text": "Pablo Picasso pintou 'Guernica' em 1937 como uma resposta ao bombardeio de Guernica durante a Guerra Civil Espanhola."
+        },
+        {
+            "type": "img",
+            "src": "assets/5.jpg",
+            "name": "A Última Ceia",
+            "text": "Leonardo da Vinci criou esta representação da última ceia de Jesus em 1495-1498."
+        },
+        {
+            "type": "img",
+            "src": "assets/6.jpg",
+            "name": "A Natividade de Vênus",
+            "text": "Botticelli pintou essa cena mitológica da deusa Vênus emergindo do mar em meados do século XV."
+        },
+        {
+            "type": "img",
+            "src": "assets/7.jpg",
+            "name": "Noite Estrelada Sobre o Ródano",
+            "text": "Van Gogh retratou a noite estrelada sobre o rio Ródano em 1888, capturando o brilho das estrelas."
+        },
+        {
+            "type": "img",
+            "src": "assets/8.jpg",
+            "name": "O Grito",
+            "text": "Edvard Munch criou várias versões de 'O Grito' entre 1893 e 1910, representando angústia e desespero."
+        },
+        {
+            "type": "img",
+            "src": "assets/9.jpg",
+            "name": "Les Demoiselles d'Avignon",
+            "text": "Picasso pintou esta obra-prima do cubismo em 1907, retratando cinco figuras distorcidas e geométricas."
+        },
+        {
+            "type": "img",
+            "src": "assets/10.jpg",
+            "name": "A Última Ceia (de Tintoretto)",
+            "text": "Tintoretto pintou sua própria interpretação da Última Ceia em meados do século XVI."
+        },
+        {
+            "type": "img",
+            "src": "assets/11.jpg",
+            "name": "A Garota com um Brinco de Pérola",
+            "text": "Johannes Vermeer retratou essa jovem com uma pérola pendurada da orelha no século XVII."
+        },
+        {
+            "type": "img",
+            "src": "assets/12.jpg",
+            "name": "Nascimento de Vênus",
+            "text": "Botticelli pintou outra cena da deusa Vênus em meados do século XV, representando seu nascimento do mar."
+        },
+        {
+            "type": "img",
+            "src": "assets/13.jpg",
+            "name": "O Quarto em Arles",
+            "text": "Van Gogh pintou essa representação de seu próprio quarto em Arles, França, em 1888."
+        },
+        {
+            "type": "img",
+            "src": "assets/14.jpg",
+            "name": "O Beijo",
+            "text": "Gustav Klimt pintou 'O Beijo' em 1907-1908, destacando a ornamentação e o simbolismo."
+        },
+        {
+            "type": "img",
+            "src": "assets/15.jpg",
+            "name": "A Persistência da Memória (de Gheorghe Ursu)",
+            "text": "Gheorghe Ursu, um pintor contemporâneo, homenageou Salvador Dalí reinterpretando 'A Persistência da Memória'."
+        },
+        {
+            "type": "img",
+            "src": "assets/16.jpg",
+            "name": "A Tentação de Santo Antônio",
+            "text": "Salvador Dalí pintou várias versões dessa cena surrealista ao longo de sua carreira."
+        },
+        {
+            "type": "img",
+            "src": "assets/17.jpg",
+            "name": "Os Girassóis",
+            "text": "Van Gogh criou várias pinturas de girassóis, uma das quais é a mais famosa, feita em 1888."
+        },
+        {
+            "type": "img",
+            "src": "assets/18.jpg",
+            "name": "O Grito (de Munch)",
+            "text": "A versão de Edvard Munch de 'O Grito' de 1893 é uma das mais reconhecíveis."
+        },
+        {
+            "type": "img",
+            "src": "assets/19.jpg",
+            "name": "A Criação de Adão",
+            "text": "Michelangelo pintou essa icônica cena do teto da Capela Sistina, concluída em 1512."
+        },
+        {
+            "type": "img",
+            "src": "assets/20.jpg",
+            "name": "American Gothic",
+            "text": "Grant Wood retratou um fazendeiro e sua filha com uma casa gótica ao fundo em 1930."
+        },
+        {
+            "type": "img",
+            "src": "assets/21.jpg",
+            "name": "Autorretrato com Colar de Espinhos e Beija-Flor",
+            "text": "Frida Kahlo pintou esse autorretrato autêntico em 1940, mostrando sua dor e força."
+        },
+        {
+            "type": "img",
+            "src": "assets/22.jpg",
+            "name": "A Perspectiva Urbana",
+            "text": "Kazimir Malevich criou essa pintura abstrata em 1912, influenciando o movimento suprematista."
+        },
+        {
+            "type": "img",
+            "src": "assets/23.jpg",
+            "name": "A Última Jantar (de Ticiano)",
+            "text": "Ticiano pintou sua própria interpretação da Última Ceia em meados do século XVI."
+        },
+        {
+            "type": "img",
+            "src": "assets/24.jpg",
+            "name": "Café na Place du Forum, Arles, à Noite",
+            "text": "Este quadro de Vincent van Gogh, pintado em 1888, retrata um café na cidade de Arles à noite."
+        },
+        {
+            "type": "img",
+            "src": "assets/25.jpg",
+            "name": "Nascimento de Vênus (de Cabanel)",
+            "text": "Alexandre Cabanel pintou esta cena da deusa Vênus em meados do século XIX, mantendo um estilo clássico."
+        }
+    ]
+}
